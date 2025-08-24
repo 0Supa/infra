@@ -105,6 +105,7 @@
     };
     sudo.enable = false;
     rtkit.enable = true;
+    polkit.enable = true;
   };
 
   users = {

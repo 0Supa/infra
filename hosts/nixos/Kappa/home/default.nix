@@ -232,6 +232,7 @@
   };
 
   services = {
+    polkit-gnome.enable = true;
     mpris-proxy.enable = true;
 
     swaync = {
