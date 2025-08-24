@@ -3,13 +3,13 @@
 }:
 {
   services.restic = {
-    backups.r2 = {
+    backups.digi = {
       initialize = true;
-      repository = "s3:https://67f502e1ead7cb06d017e56dfd5288ac.r2.cloudflarestorage.com/backup/kappacino";
+      repository = "rclone:digi:backups/Kappacino/";
       passwordFile = "/root/.secrets/RESTIC_PASSWORD_FILE";
-      environmentFile = "/root/.secrets/RESTIC_R2_SECRETS";
       timerConfig = {
         OnCalendar = "03:00";
+        RandomizedDelaySec = "30m";
         Persistent = true;
       };
       exclude = [
@@ -26,6 +26,11 @@
         "/var/www"
         "/var/lib"
         "/etc"
+      ];
+      pruneOpts = [
+        "--keep-daily=7"
+        "--keep-weekly=6"
+        "--keep-monthly=5"
       ];
     };
   };
