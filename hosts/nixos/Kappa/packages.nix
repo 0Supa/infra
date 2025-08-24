@@ -24,6 +24,8 @@
     libclang
     wl-clipboard
     doas-sudo-shim
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
   ];
 
   users.users.supa.packages = with pkgs; [
