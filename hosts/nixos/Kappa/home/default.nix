@@ -311,4 +311,15 @@
       "video/*" = "mpv.desktop";
     };
   };
+
+  xdg.configFile."xfce4/helpers.rc".text = ''
+    TerminalEmulator=foot
+    FileManager=thunar
+    WebBrowser=librewolf
+    MailReader=thunderbird
+    TextEditor=code
+    VideoPlayer=mpv
+    ImageViewer=nsxiv
+    ArchiveManager=file-roller
+  '';
 }
