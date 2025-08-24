@@ -14,14 +14,19 @@
       };
       exclude = [
         "node_modules"
-        ".git"
+        "/home/*/go"
         ".cache"
+        ".cargo"
+        ".rustup"
         "/var/cache"
         "/var/www/fi.supa.sh"
+        "/var/www/i.supa.sh"
         "/var/lib/jellyfin/transcodes"
-        "/home/minecraft/supa/bluemap/web/maps"
+        "/home/minecraft/**/bluemap/web/maps"
+        "/home/fivem/**/cache"
       ];
       paths = [
+        "/root"
         "/home"
         "/var/www"
         "/var/lib"
