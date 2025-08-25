@@ -9,7 +9,7 @@
       package = pkgs.niri-unstable;
     };
 
-    # firefox.enable = true;
+    firefox.enable = true;
 
     zsh.enable = true;
 

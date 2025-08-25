@@ -32,7 +32,6 @@
     # Internet
     librewolf
     chromium
-    firefox
     technorino
     electrum # BTC wallet
     # monero-gui # XMR wallet
