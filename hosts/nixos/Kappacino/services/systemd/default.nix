@@ -90,7 +90,7 @@ in
     };
 
     fivem = {
-      enable = true;
+      enable = false;
       unitConfig = {
         After = "network-online.target";
       };
