@@ -130,6 +130,7 @@
       }
 
       .module {
+        background-color: alpha(@base00, 0.8);
         margin-top: 4px;
         margin-right: 4px;
         margin-left: 4px;
