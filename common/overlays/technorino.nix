@@ -13,8 +13,8 @@ final: prev: {
       owner = "2547techno";
       repo = "technorino";
       tag = null;
-      rev = "ca72ecfcc8db40c16051adf7c426a01eaffd5c6c";
-      hash = "sha256-pG96nAyjEtfeOCkhG5rTs1g3Vq4lXHpLSDq0Tr196wQ=";
+      rev = "57f37a716a250edb16ad0c6eefbdf648810e1bc3";
+      hash = "sha256-R1AsGyrumSpKv8TyBNalb/CEiU1xQeAv3mpKMfSIelY=";
     };
   });
 }
