@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  inputs,
   pkgs,
   unstable,
   ...
@@ -32,7 +33,7 @@
     # Internet
     librewolf
     chromium
-    technorino
+    inputs.technorino.packages.${pkgs.system}.default
     electrum # BTC wallet
     # monero-gui # XMR wallet
     qbittorrent
@@ -89,11 +90,5 @@
 
     # Games
     prismlauncher # Minecraft launcher
-
-    # Other
-    (pkgs.writeShellScriptBin "c2" ''
-      export QT_QPA_PLATFORM=xcb
-      exec ${lib.getExe technorino} "$@"
-    '')
   ];
 }

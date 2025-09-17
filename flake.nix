@@ -31,6 +31,8 @@
 
     stylix.url = "github:nix-community/stylix/release-25.05";
 
+    technorino.url = "git+https://github.com/2547techno/technorino?submodules=1";
+
     vscode-server.url = "github:nix-community/nixos-vscode-server";
 
     uploader-basic.url = "github:0Supa/uploader-basic";

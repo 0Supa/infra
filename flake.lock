@@ -541,6 +541,22 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1755593991,
+        "narHash": "sha256-BA9MuPjBDx/WnpTJ0EGhStyfE7hug8g85Y3Ju9oTsM4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a58390ab6f1aa810eb8e0f0fc74230e7cc06de03",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1754725699,
         "narHash": "sha256-iAcj9T/Y+3DBy2J0N+yF9XQQQ8IEb5swLFzs23CdP88=",
         "owner": "NixOS",
@@ -555,7 +571,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1682134069,
         "narHash": "sha256-TnI/ZXSmRxQDt2sjRYK/8j8iha4B4zP2cnQCZZ3vp7k=",
@@ -569,7 +585,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1753694789,
         "narHash": "sha256-cKgvtz6fKuK1Xr5LQW/zOUiAC0oSQoA9nOISB0pJZqM=",
@@ -622,6 +638,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-wayland": "nixpkgs-wayland",
         "stylix": "stylix",
+        "technorino": "technorino",
         "uploader-basic": "uploader-basic",
         "vscode-server": "vscode-server",
         "waybar": "waybar"
@@ -737,6 +754,26 @@
         "type": "github"
       }
     },
+    "technorino": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1758076986,
+        "narHash": "sha256-CP+EJF3QnOgaulBfanDvXoFVD4Xd4Kf/l9gVYkl40ow=",
+        "ref": "refs/heads/technorino",
+        "rev": "acfeb804577d18a64ba171236dcd5648c0c9cf96",
+        "revCount": 5757,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/2547techno/technorino"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/2547techno/technorino"
+      }
+    },
     "tinted-foot": {
       "flake": false,
       "locked": {
@@ -842,7 +879,7 @@
     },
     "uploader-basic": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1754966076,
@@ -861,7 +898,7 @@
     "vscode-server": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1753541826,
@@ -880,7 +917,7 @@
     "waybar": {
       "inputs": {
         "flake-compat": "flake-compat_2",
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_8"
       },
       "locked": {
         "lastModified": 1754637322,
