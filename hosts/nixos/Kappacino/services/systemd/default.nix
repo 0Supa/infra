@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  unstable,
   ...
 }:
 let
@@ -29,6 +30,7 @@ in
     supa8 = mkService "./supa8" "${projects}/supa8" [
       pkgs.zbar
       pkgs.ffmpeg-full
+      unstable.yt-dlp
     ];
     whatbot = mkService "./whatbot" "${projects}/whatbot" [ ];
     twitch-clipper = mkService "./twitch-clipper" "${projects}/twitch-clipper" [ pkgs.ffmpeg-full ];
