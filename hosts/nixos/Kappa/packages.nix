@@ -42,6 +42,7 @@
     discord
 
     # Utils/Misc
+    xwayland-satellite-unstable
     kitty # Terminal
     foot
     fastfetch

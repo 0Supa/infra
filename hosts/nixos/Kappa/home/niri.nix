@@ -22,7 +22,6 @@
       environment.DISPLAY = ":0";
 
       spawn-at-startup = [
-        { command = [ "${lib.getExe pkgs.xwayland-satellite-unstable}" ]; }
         {
           command = [
             "${lib.getExe pkgs.swaybg}"
