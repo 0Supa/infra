@@ -288,6 +288,7 @@
       };
 
       "umami.supa.codes" = {
+        serverAliases = [ "intel.supa.sh" ];
         extraConfig = ''
           reverse_proxy :1700
         '';
