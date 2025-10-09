@@ -52,10 +52,11 @@ in
           PRISMA_FMT_BINARY="${pkgs.prisma-engines}/bin/prisma-fmt"
           PATH="$PWD/node_modules/.bin/:$PATH"
           PORT=1700
-          node .next/standalone/server.js
+          npm run start
         ''
         "${home}/git/umami"
         [
+          pkgs.bash
           pkgs.nodejs_22
           pkgs.openssl
         ];
