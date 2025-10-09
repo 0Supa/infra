@@ -18,7 +18,7 @@ let
       Restart = "always";
       RestartSec = 5;
       WorkingDirectory = dir;
-      ExecStart = "/bin/sh -c ${lib.escapeShellArg cmd}";
+      ExecStart = "/bin/sh -c ${lib.escapeShellArg (builtins.replaceStrings [ "\n" ] [ " " ] cmd)}";
       Environment = "PATH=${lib.makeBinPath pkgs}";
     };
     wantedBy = [ "multi-user.target" ];
@@ -45,11 +45,19 @@ in
 
     umami =
       mkService
-        "nix-shell --command 'npx next start -p 1700' -I nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+        ''
+          PRISMA_SCHEMA_ENGINE_BINARY="${pkgs.prisma-engines}/bin/schema-engine"
+          PRISMA_QUERY_ENGINE_BINARY="${pkgs.prisma-engines}/bin/query-engine"
+          PRISMA_QUERY_ENGINE_LIBRARY="${pkgs.prisma-engines}/lib/libquery_engine.node"
+          PRISMA_FMT_BINARY="${pkgs.prisma-engines}/bin/prisma-fmt"
+          PATH="$PWD/node_modules/.bin/:$PATH"
+          PORT=1700
+          node .next/standalone/server.js
+        ''
         "${home}/git/umami"
         [
-          pkgs.nix
-          pkgs.bash
+          pkgs.nodejs_22
+          pkgs.openssl
         ];
 
     mediamtx = mkService "./mediamtx" "${home}/git/mediamtx" [ pkgs.ffmpeg-full ];
