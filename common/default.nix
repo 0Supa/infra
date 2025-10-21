@@ -10,8 +10,11 @@
     inputs.agenix.nixosModules.default
   ];
 
-  environment.systemPackages = [
-    pkgs.agenix
+  environment.systemPackages = with pkgs; [
+    agenix
+    git
+    vim
+    bottom
   ];
 
   networking = {

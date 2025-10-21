@@ -9,12 +9,9 @@
 {
   environment.systemPackages = with pkgs; [
     # Essential
-    vim
     wget
-    git
     xz
     htop
-    bottom
     nvitop
     playerctl
     psmisc
