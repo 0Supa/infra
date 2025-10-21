@@ -75,6 +75,12 @@
         '';
       };
 
+      "reddit.supa.gay" = {
+        extraConfig = ''
+          reverse_proxy :${toString config.services.redlib.port}
+        '';
+      };
+
       "zonian.is.supa.gay" = {
         extraConfig = ''
           redir * https://zonian.dev/
