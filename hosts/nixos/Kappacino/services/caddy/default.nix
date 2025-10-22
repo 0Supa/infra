@@ -99,6 +99,17 @@
           root * /var/www/pin.supa.gay
           file_server
           import static
+
+          rate_limit {
+            zone binternet {
+              match {
+                not remote_ip private_ranges
+              }
+              key    {remote_host}
+              events 20
+              window 10s
+            }
+          }
         '';
       };
 
