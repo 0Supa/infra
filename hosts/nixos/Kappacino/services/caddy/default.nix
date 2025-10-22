@@ -78,6 +78,17 @@
       "reddit.supa.gay" = {
         extraConfig = ''
           reverse_proxy :${toString config.services.redlib.port}
+
+          rate_limit {
+            zone redlib {
+              match {
+                path / /r/* /user/*
+              }
+              key    {header.CF-Connecting-IP}
+              events 10
+              window 10s
+            }
+          }
         '';
       };
 
