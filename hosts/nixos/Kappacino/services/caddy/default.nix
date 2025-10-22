@@ -81,6 +81,16 @@
         '';
       };
 
+      "pin.supa.gay" = {
+        extraConfig = ''
+          php_fastcgi unix/${config.services.phpfpm.pools.caddy.socket}
+
+          root * /var/www/pin.supa.gay
+          file_server
+          import static
+        '';
+      };
+
       "zonian.is.supa.gay" = {
         extraConfig = ''
           redir * https://zonian.dev/
