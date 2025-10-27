@@ -685,15 +685,16 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1761090439,
-        "narHash": "sha256-UjBeCChiA65lB3yXq7F8KacnMnyUaWLIr6Kf2g92gJI=",
+        "lastModified": 1761542164,
+        "narHash": "sha256-FNRLvV/mdHWEOiZpqdXvzESfQeQnpvaRuD2XZfYWgFw=",
         "owner": "0Supa",
         "repo": "redlib",
-        "rev": "38fe1459b3e28ef687606077c5a6477776fbcf5e",
+        "rev": "660230b777d095e37a7be5a0eb914d0a1c965ecd",
         "type": "github"
       },
       "original": {
         "owner": "0Supa",
+        "ref": "prod",
         "repo": "redlib",
         "type": "github"
       }
