@@ -390,19 +390,6 @@
         '';
       };
 
-      "roles.tv" = {
-        extraConfig = ''
-          # respond "Temporarily down for maintenance, please check back later!" 503
-          reverse_proxy :2435
-        '';
-      };
-
-      "www.roles.tv" = {
-        extraConfig = ''
-          redir https://roles.tv{uri}
-        '';
-      };
-
       "logs.zonian.dev" = {
         serverAliases = [ "bestlogs.supa.codes" ];
         extraConfig = ''
