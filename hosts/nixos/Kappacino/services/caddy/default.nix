@@ -292,7 +292,7 @@
         extraConfig = ''
           redir / https://tv.supa.sh/logs{uri}
 
-          handle_path /robots.txt {
+          handle /robots.txt {
             respond <<EOF
             User-agent: *
             Disallow: /
