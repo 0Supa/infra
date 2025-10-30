@@ -291,6 +291,14 @@
       "logs.supa.codes" = {
         extraConfig = ''
           redir / https://tv.supa.sh/logs{uri}
+
+          handle_path /robots.txt {
+            respond <<EOF
+            User-agent: *
+            Disallow: /
+            EOF 200
+          }
+
           reverse_proxy :8025
           encode zstd gzip
 
