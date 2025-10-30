@@ -252,13 +252,6 @@
         '';
       };
 
-      "deluge.supa.sh" = {
-        extraConfig = ''
-          redir / https://qbt.supa.sh/ permanent
-          # reverse_proxy 127.0.0.1:8112
-        '';
-      };
-
       "qbt.supa.sh" = {
         extraConfig = ''
           reverse_proxy 127.0.0.1:8113
