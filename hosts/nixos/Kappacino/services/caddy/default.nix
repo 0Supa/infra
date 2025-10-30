@@ -390,24 +390,6 @@
         '';
       };
 
-      "logs.spanix.team" = {
-        extraConfig = ''
-          reverse_proxy :10001
-          encode zstd gzip
-
-          rate_limit {
-            zone logs {
-              match {
-                not remote_ip private_ranges
-              }
-              key    {remote_host}
-              events 30
-              window 10s
-            }
-          }
-        '';
-      };
-
       "roles.tv" = {
         extraConfig = ''
           # respond "Temporarily down for maintenance, please check back later!" 503
