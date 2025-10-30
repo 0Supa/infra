@@ -222,6 +222,13 @@
             reverse_proxy :7421
           }
 
+          handle /robots.txt {
+            respond <<EOF
+            User-agent: *
+            Disallow: /
+            EOF 200
+          }
+
           handle {
             try_files {path} {file.base}.*
           }
