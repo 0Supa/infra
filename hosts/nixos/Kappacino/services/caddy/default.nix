@@ -29,7 +29,7 @@
 
       "supa.codes" = {
         extraConfig = ''
-          redir / https://supa.sh/
+          redir / https://supa.sh/ permanent
           root * /var/www/supa.codes
           file_server
           import static
@@ -65,7 +65,7 @@
       "home.supa.sh" = {
         serverAliases = [ "supa.home.ro" ];
         extraConfig = ''
-          redir * https://supa.sh/
+          redir * https://supa.sh/ permanent
         '';
       };
 
@@ -115,7 +115,7 @@
 
       "zonian.is.supa.gay" = {
         extraConfig = ''
-          redir * https://zonian.dev/
+          redir * https://zonian.dev/ permanent
         '';
       };
 
@@ -171,7 +171,7 @@
 
       "tv.supa.codes" = {
         extraConfig = ''
-          redir https://tv.supa.sh{uri}
+          redir https://tv.supa.sh{uri} permanent
         '';
       };
 
@@ -290,7 +290,7 @@
 
       "logs.supa.codes" = {
         extraConfig = ''
-          redir / https://tv.supa.sh/logs{uri}
+          redir / https://tv.supa.sh/logs{uri} permanent
 
           handle /robots.txt {
             respond <<EOF
