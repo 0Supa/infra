@@ -44,7 +44,7 @@
     foot
     fastfetch
     ffmpeg-full
-    yt-dlp
+    yt-dlp-git
     pavucontrol # Volume control
     keepassxc # Password manager
     flameshot # Screenshots

@@ -30,7 +30,7 @@ in
     supa8 = mkService "./supa8" "${projects}/supa8" [
       pkgs.zbar
       pkgs.ffmpeg-full
-      unstable.yt-dlp
+      pkgs.yt-dlp-git
     ];
     whatbot = mkService "./whatbot" "${projects}/whatbot" [ ];
     twitch-clipper = mkService "./twitch-clipper" "${projects}/twitch-clipper" [ pkgs.ffmpeg-full ];

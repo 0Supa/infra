@@ -714,7 +714,8 @@
         "technorino": "technorino",
         "uploader-basic": "uploader-basic",
         "vscode-server": "vscode-server",
-        "waybar": "waybar"
+        "waybar": "waybar",
+        "yt-dlp-git": "yt-dlp-git"
       }
     },
     "rust-analyzer-src": {
@@ -1072,6 +1073,22 @@
       "original": {
         "owner": "Supreeeme",
         "repo": "xwayland-satellite",
+        "type": "github"
+      }
+    },
+    "yt-dlp-git": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762818008,
+        "narHash": "sha256-XBAlny9sH12igt75esQZdnsQ9UyolfelEtNR+6+TaHE=",
+        "owner": "yt-dlp",
+        "repo": "yt-dlp",
+        "rev": "7eff676183518175ce495ae63291c89f9b39f02a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yt-dlp",
+        "repo": "yt-dlp",
         "type": "github"
       }
     }

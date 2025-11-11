@@ -28,6 +28,11 @@
     redlib.url = "github:0Supa/redlib/prod";
     vscode-server.url = "github:nix-community/nixos-vscode-server";
     uploader-basic.url = "github:0Supa/uploader-basic";
+
+    yt-dlp-git = {
+      url = "github:yt-dlp/yt-dlp";
+      flake = false;
+    };
   };
   outputs =
     inputs:

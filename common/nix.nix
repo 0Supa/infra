@@ -7,7 +7,7 @@
   nixpkgs = {
     config.allowUnfree = true;
 
-    overlays = (import ./overlays) ++ [
+    overlays = (import ./overlays inputs) ++ [
       inputs.nixpkgs-wayland.overlays.default
       inputs.agenix.overlays.default
       inputs.fenix.overlays.default
