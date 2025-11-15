@@ -39,7 +39,6 @@
         "https://nix-community.cachix.org"
         "https://nixpkgs-wayland.cachix.org"
         "https://niri.cachix.org"
-        "https://stylix.cachix.org"
         "https://technorino.cachix.org"
       ];
       trusted-public-keys = [
@@ -47,7 +46,6 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
         "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
-        "stylix.cachix.org-1:iTycMb+viP8aTqhRDvV5qjs1jtNJKH9Jjvqyg4DYxhw="
         "technorino.cachix.org-1:u2mWFvgBuof1W3wr8VT5UQ10m4T1yoJb6fVnmhXf04o="
       ];
     };
