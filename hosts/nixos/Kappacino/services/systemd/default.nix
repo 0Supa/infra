@@ -28,6 +28,7 @@ in
   systemd.services = {
     cdn-helper = mkService "./cdn-helper" "${projects}/cdn-helper" [ pkgs.ffmpeg-full ];
     supa8 = mkService "./supa8" "${projects}/supa8" [
+      pkgs.git
       pkgs.zbar
       pkgs.ffmpeg-full
       pkgs.yt-dlp-git
