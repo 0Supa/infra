@@ -9,7 +9,6 @@
 {
   environment.systemPackages = with pkgs; [
     # Essential
-    wget
     xz
     htop
     nvitop

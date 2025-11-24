@@ -15,6 +15,7 @@
     git
     vim
     bottom
+    wget
   ];
 
   networking = {
