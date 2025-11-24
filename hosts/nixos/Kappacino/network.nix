@@ -15,6 +15,7 @@
         25565 # Minecraft
         1935 # RTMP
         8554 # RTSP
+        30120 # FiveM
       ];
       allowedUDPPorts = [
         80
@@ -24,6 +25,7 @@
         8189 # WebRTC (ICE)
         8890 # SRT
         24454 # Minecraft (voicechat)
+        30120 # FiveM
       ];
     };
   };
