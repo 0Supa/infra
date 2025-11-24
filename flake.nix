@@ -4,7 +4,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs-wayland = {
-      url = "github:nix-community/nixpkgs-wayland?rev=0f2e1c75ea21ebec5e54522bf544fdf757ac8b9d";
+      url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
