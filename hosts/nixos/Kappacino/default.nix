@@ -93,6 +93,8 @@
     clickhouse.enable = true;
   };
 
+  programs.nix-ld.enable = true;
+
   environment.etc."clickhouse-server/config.xml".source =
     lib.mkForce ./etc/clickhouse-server/config.xml;
 
