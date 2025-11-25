@@ -31,7 +31,6 @@
       };
       "/home/fivem".Z = {
         mode = "2770";
-        user = "fivem";
         group = "fivem";
       };
     };
