@@ -104,6 +104,7 @@
             zone binternet {
               match {
                 not remote_ip private_ranges
+                not path /image_proxy.php
               }
               key    {remote_host}
               events 20
