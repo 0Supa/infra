@@ -109,7 +109,7 @@
         "Mod+D".action = spawn "fuzzel";
         "Super+L".action = spawn "swaylock";
 
-        "Mod+Tab".action = toggle-overview;
+        "Super+Tab".action = toggle-overview;
 
         "Mod+Shift+Q".action = close-window;
 
