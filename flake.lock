@@ -652,11 +652,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1761542164,
-        "narHash": "sha256-FNRLvV/mdHWEOiZpqdXvzESfQeQnpvaRuD2XZfYWgFw=",
+        "lastModified": 1764950476,
+        "narHash": "sha256-Fq2XG5LFVfkQuvouhVxxpAWnIcZDUlLX7WuFrEQ4eT0=",
         "owner": "0Supa",
         "repo": "redlib",
-        "rev": "660230b777d095e37a7be5a0eb914d0a1c965ecd",
+        "rev": "0c9ede053b71ab67f70dc44bbccd2c02a9b6e621",
         "type": "github"
       },
       "original": {
