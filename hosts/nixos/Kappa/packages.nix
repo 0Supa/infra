@@ -29,7 +29,7 @@
     # Internet
     librewolf
     chromium
-    inputs.technorino.packages.${pkgs.system}.package
+    inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package
     electrum # BTC wallet
     # monero-gui # XMR wallet
     qbittorrent
@@ -44,6 +44,7 @@
     fastfetch
     ffmpeg-full
     yt-dlp-git
+    file-roller # Archive manager
     pavucontrol # Volume control
     keepassxc # Password manager
     flameshot # Screenshots

@@ -6,7 +6,7 @@
 {
   services.redlib = {
     enable = true;
-    package = inputs.redlib.packages.${pkgs.system}.default;
+    package = inputs.redlib.packages.${pkgs.stdenv.hostPlatform.system}.default;
     port = 27693;
     settings = {
       REDLIB_DEFAULT_SHOW_NSFW = "on";
