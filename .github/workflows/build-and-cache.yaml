@@ -16,10 +16,10 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
 
       - name: Install Omnix and Cachix
-        run: nix profile add nixpkgs#omnix nixpkgs#cachix
+        run: nix --accept-flake-config profile add github:juspay/omnix github:cachix/cachix/latest
 
       - name: Build flake outputs
-        run: om ci run
+        run: om ci run -- --accept-flake-config
 
       - name: Push to Cachix
         env:
