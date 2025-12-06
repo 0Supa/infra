@@ -16,9 +16,12 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
 
       - name: Install Omnix and Cachix
-        run: nix profile install nixpkgs#omnix nixpkgs#cachix
+        run: nix profile add nixpkgs#omnix nixpkgs#cachix
 
-      - name: Build and cache flake outputs
+      - name: Build flake outputs
+        run: om ci run
+
+      - name: Push to Cachix
         env:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
-        run: om ci run --include-all-dependencies | xargs cachix push supa
+        run: cachix push supa
