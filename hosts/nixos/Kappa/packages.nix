@@ -47,7 +47,6 @@
     file-roller # Archive manager
     pavucontrol # Volume control
     keepassxc # Password manager
-    flameshot # Screenshots
     songrec # Shazam song recognition
     filezilla
     curlie
