@@ -16,6 +16,7 @@
     vim
     bottom
     wget
+    nixfmt-rfc-style
   ];
 
   networking = {

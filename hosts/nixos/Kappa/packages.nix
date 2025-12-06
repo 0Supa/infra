@@ -74,7 +74,6 @@
     gopls
     fenix.default.toolchain
     nil
-    nixfmt-rfc-style
     php
 
     # Multimedia
