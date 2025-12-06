@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nixpkgs-wayland = {
@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {
@@ -23,7 +23,7 @@
     fenix.url = "github:nix-community/fenix";
     niri.url = "github:sodiboo/niri-flake";
     waybar.url = "github:Alexays/Waybar";
-    stylix.url = "github:nix-community/stylix/release-25.05";
+    stylix.url = "github:nix-community/stylix/release-25.11";
     technorino.url = "git+https://github.com/2547techno/technorino?submodules=1";
     redlib.url = "github:0Supa/redlib/prod";
     uploader-basic.url = "github:0Supa/uploader-basic";
