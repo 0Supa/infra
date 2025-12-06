@@ -1,0 +1,8 @@
+ci:
+  default:
+    root:
+      dir: .
+      steps:
+        build:
+          enable: true
+          impure: true
