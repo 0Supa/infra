@@ -24,4 +24,4 @@ jobs:
       - name: Push to Cachix
         env:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
-        run: cachix push supa
+        run: cachix push supa ./result
