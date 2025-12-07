@@ -22,22 +22,18 @@
         applications = 12;
         desktop = 12;
       };
-
       serif = {
         package = pkgs.noto-fonts;
         name = "Noto Serif";
       };
-
       sansSerif = {
         package = pkgs.inter;
         name = "Inter";
       };
-
       monospace = {
         package = pkgs.fantasque-sans-mono;
         name = "Fantasque Sans Mono";
       };
-
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
@@ -49,6 +45,8 @@
       popups = 0.8;
       terminal = 0.8;
     };
+
+    targets.swaync.enable = false;
   };
 
   gtk = {
@@ -248,28 +246,50 @@
           "notifications"
         ];
       };
-      style = ''
-        .control-center {
-          background: alpha(@base00, 0.8);
-          border: 2px solid @base0D;
-          border-radius: 12px;
-        }
+      style = with config.lib.stylix.colors.withHashtag; ''
+        @define-color base00 ${base00}; @define-color base01 ${base01};
+        @define-color base02 ${base02}; @define-color base03 ${base03};
+        @define-color base04 ${base04}; @define-color base05 ${base05};
+        @define-color base06 ${base06}; @define-color base07 ${base07};
 
-        .control-center .notification-row .notification-background {
-          background: transparent;
+        @define-color base08 ${base08}; @define-color base09 ${base09};
+        @define-color base0A ${base0A}; @define-color base0B ${base0B};
+        @define-color base0C ${base0C}; @define-color base0D ${base0D};
+        @define-color base0E ${base0E}; @define-color base0F ${base0F};
+
+        .control-center {
+          border: 2px solid @base0D;
         }
 
         .notification {
-          border-radius: 12px;
-          margin: 0;
+          background: alpha(@base00, 1)
         }
 
-        .widget-mpris .widget-mpris-player > box > button {
-          border: none;
+        .floating-notifications {
+          margin-top: 6px;
         }
 
-        .widget-mpris .widget-mpris-player > box > button:hover {
-          border: none;
+        .notification-group {
+          background: transparent;
+        }
+
+        :root {
+          --cc-bg: alpha(@base00, 0.8);
+
+          --noti-border-color: @base0D;
+          # --noti-bg: 48, 48, 48;
+          # --noti-bg-alpha: 0.8;
+          --noti-bg-darker: @base01;
+          --noti-bg-hover: @base02;
+          --noti-bg-focus: @base03;
+          --noti-close-bg: @base01;
+          --noti-close-bg-hover: @base02;
+
+          --text-color: @base05;
+          --text-color-disabled: @base04;
+
+          # --border: 2px solid var(--noti-border-color);
+          --border-radius: 12px;
         }
       '';
     };
