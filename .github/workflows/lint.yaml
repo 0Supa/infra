@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      - name: Set up Nix
-        uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/nix-installer-action@main
 
       - name: nixfmt
         run: "nix-shell -p treefmt nixfmt-rfc-style --run 'treefmt --no-cache --fail-on-change'"
