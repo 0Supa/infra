@@ -18,7 +18,7 @@
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        backupFileExtension = "hm-bkp-${builtins.toString builtins.currentTime}";
+        backupFileExtension = "bak";
 
         users.supa = {
           _module.args = { inherit inputs; };
