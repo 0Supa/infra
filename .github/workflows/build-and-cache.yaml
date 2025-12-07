@@ -1,6 +1,8 @@
 name: Build & Cache flake outputs
 
 on: push
+permissions:
+  contents: read
 
 jobs:
   build-and-cache:
@@ -15,13 +17,20 @@ jobs:
       - name: Set up Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Install Omnix and Cachix
-        run: nix --accept-flake-config profile add github:juspay/omnix github:cachix/cachix/latest
-
       - name: Build flake outputs
-        run: om ci run -- --accept-flake-config
+        run: |
+          nix --accept-flake-config run github:juspay/omnix -- ci run \
+            --results=$HOME/omci.json \
+            -- --accept-flake-config
 
       - name: Push to Cachix
         env:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
-        run: cachix push supa ./result
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+        if: env.BRANCH_NAME == 'main'
+        run: |
+          nix run github:juspay/cachix-push -- \
+            --subflake root \
+            --prefix "${BRANCH_NAME}" \
+            --cache supa \
+            < $HOME/omci.json
