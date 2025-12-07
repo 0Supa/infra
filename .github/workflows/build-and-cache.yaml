@@ -12,10 +12,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
-      - uses: wimpysworld/nothing-but-nix@main
 
-      - name: Set up Nix
-        uses: DeterminateSystems/nix-installer-action@main
+      - uses: wimpysworld/nothing-but-nix@main
+        with:
+          root-safe-haven: "8192"
+          mnt-safe-haven: "4096"
+
+      - uses: DeterminateSystems/nix-installer-action@main
 
       - name: Build flake outputs
         run: |
