@@ -129,7 +129,7 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       # corefonts
-      font-awesome
+      font-awesome_6
       iosevka
       open-dyslexic
       powerline-symbols
