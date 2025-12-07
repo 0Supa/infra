@@ -2,37 +2,13 @@
   ...
 }:
 {
-  systemd.tmpfiles.settings = {
-    "10-custom-permissions-nix-build-${toString builtins.currentTime}" = {
-      "/mnt/hdd_4t".Z = {
-        mode = "0775";
-        user = "supa";
-      };
-      "/mnt/hdd_4t/movies".Z = {
-        mode = "2770";
-        group = "media";
-      };
-      "/mnt/hdd_4t/music".Z = {
-        mode = "2770";
-        group = "media";
-      };
-      "/mnt/hdd_500g".Z = {
-        mode = "2770";
-        group = "media";
-      };
-      "/var/www".Z = {
-        mode = "2770";
-        user = "supa";
-        group = "www";
-      };
-      "/home/minecraft".Z = {
-        mode = "2770";
-        group = "minecraft";
-      };
-      "/home/fivem".Z = {
-        mode = "2770";
-        group = "fivem";
-      };
-    };
-  };
+  systemd.tmpfiles.rules = [
+    "Z /mnt/hdd_4t 0775 supa - -"
+    "Z /mnt/hdd_4t/movies 2770 - media -"
+    "Z /mnt/hdd_4t/music 2770 - media -"
+    "Z /mnt/hdd_500g 2770 - media -"
+    "Z /var/www 2770 supa www -"
+    "Z /home/minecraft 2770 - minecraft -"
+    "Z /home/fivem 2770 - fivem -"
+  ];
 }
