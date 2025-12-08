@@ -86,6 +86,7 @@ in
 
     mc-supa = {
       enable = true;
+      restartIfChanged = false;
       unitConfig = {
         After = "network-online.target";
       };
@@ -103,6 +104,7 @@ in
 
     fivem = {
       enable = true;
+      restartIfChanged = false;
       unitConfig = {
         After = "network-online.target";
       };
