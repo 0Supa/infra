@@ -19,12 +19,14 @@ jobs:
           mnt-safe-haven: "4096"
 
       - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          extra-conf: |
+            accept-flake-config = true
 
       - name: Build flake outputs
         run: |
-          nix --accept-flake-config run github:juspay/omnix -- ci run \
-            --results=$HOME/omci.json \
-            -- --accept-flake-config
+          nix run github:juspay/omnix -- ci run \
+            --results=$HOME/omci.json
 
       - name: Push to Cachix
         env:
