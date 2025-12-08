@@ -262,7 +262,7 @@
         }
 
         .notification {
-          background: alpha(@base00, 1)
+          background: @base00;
         }
 
         .floating-notifications {
