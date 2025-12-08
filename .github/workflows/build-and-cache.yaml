@@ -36,7 +36,6 @@ jobs:
         env:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-        if: env.BRANCH_NAME == 'main'
         run: |
           nix run github:juspay/cachix-push -- \
             --subflake root \
