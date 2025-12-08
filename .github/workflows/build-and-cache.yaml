@@ -23,6 +23,10 @@ jobs:
           extra-conf: |
             accept-flake-config = true
 
+      - uses: cachix/cachix-action@v15
+        with:
+          name: supa
+
       - name: Build flake outputs
         run: |
           nix run github:juspay/omnix -- ci run \
