@@ -74,9 +74,8 @@
     builtins.foldl' lib.recursiveUpdate { } hosts;
 
   nixConfig = {
-    extra-substituters = [
-      "https://supa.cachix.org"
-    ];
+    extra-substituters = [ "https://supa.cachix.org" ];
+    extra-trusted-substituters = [ "https://supa.cachix.org" ];
     extra-trusted-public-keys = [
       "supa.cachix.org-1:+rC20DiSj3IB8u8LgKV30nYAOwk9vP9aty3rdFz9/YM="
     ];
