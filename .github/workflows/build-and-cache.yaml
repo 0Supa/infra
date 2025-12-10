@@ -40,7 +40,7 @@ jobs:
 
       - name: Build flake outputs
         run: |
-          nix run github:juspay/omnix -- ci run \
+          nix run nixpkgs#omnix -- ci run \
             --results=$HOME/omci.json
 
       - name: Push to Cachix
