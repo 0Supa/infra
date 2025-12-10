@@ -41,6 +41,7 @@ jobs:
       - name: Build flake outputs
         run: |
           nix run nixpkgs#omnix -- ci run \
+            --extra-access-tokens ${{ secrets.GITHUB_TOKEN }} \
             --results=$HOME/omci.json
 
       - name: Push to Cachix
