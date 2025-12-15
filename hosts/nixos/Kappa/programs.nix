@@ -35,5 +35,7 @@
         obs-pipewire-audio-capture
       ];
     };
+
+    nix-ld.enable = true;
   };
 }
