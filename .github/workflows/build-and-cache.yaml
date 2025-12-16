@@ -22,6 +22,9 @@ jobs:
           mnt-safe-haven: "4096"
 
       - uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            accept-flake-config = true
 
       - uses: cachix/cachix-action@v15
         with:
