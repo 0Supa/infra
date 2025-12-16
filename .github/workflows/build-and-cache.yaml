@@ -21,14 +21,6 @@ jobs:
           root-safe-haven: "8192"
           mnt-safe-haven: "4096"
 
-      - uses: actions/cache@v4
-        with:
-          path: |
-            /nix/store
-            ${{ env.HOME }}/.cache/nix
-          key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
-          restore-keys: ${{ runner.os }}-nix-
-
       - uses: cachix/install-nix-action@v31
 
       - uses: cachix/cachix-action@v15
