@@ -74,6 +74,7 @@
     builtins.foldl' lib.recursiveUpdate { } hosts;
 
   nixConfig = {
+    download-buffer-size = "256M";
     extra-substituters = [ "https://supa.cachix.org" ];
     extra-trusted-substituters = [ "https://supa.cachix.org" ];
     extra-trusted-public-keys = [
