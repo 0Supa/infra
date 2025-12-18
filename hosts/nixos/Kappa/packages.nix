@@ -29,7 +29,7 @@
     # Internet
     librewolf
     chromium
-    inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.package
+    inputs.technorino.packages.${pkgs.stdenv.hostPlatform.system}.default
     electrum # BTC wallet
     # monero-gui # XMR wallet
     qbittorrent
