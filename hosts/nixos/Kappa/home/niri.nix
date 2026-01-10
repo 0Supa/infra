@@ -21,29 +21,6 @@
 
       environment.DISPLAY = ":0";
 
-      spawn-at-startup = [
-        {
-          command = [
-            "${lib.getExe pkgs.swaybg}"
-            "--mode"
-            "center"
-            "--image"
-            (inputs.self + /assets/wallpaper.jpg)
-          ];
-        }
-        {
-          command = [
-            "${lib.getExe pkgs.swayidle}"
-            "timeout"
-            "15"
-            "pgrep swaylock && niri msg action power-off-monitors"
-            "resume"
-            "niri msg action power-on-monitors"
-          ];
-        }
-        { command = [ "waybar" ]; }
-      ];
-
       window-rules = [
         {
           clip-to-geometry = true;
@@ -106,8 +83,8 @@
         "Mod+Shift+Slash".action = show-hotkey-overlay;
 
         "Ctrl+Mod+T".action = spawn "foot";
-        "Mod+D".action = spawn "fuzzel";
-        "Super+L".action = spawn "swaylock";
+        "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
+        "Super+L".action = spawn "dms" "ipc" "call" "lock" "lock";
 
         "Super+Tab".action = toggle-overview;
 
@@ -263,14 +240,14 @@
 
         "Mod+Shift+P".action = power-off-monitors;
 
-        "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "4%+";
-        "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "4%-";
-        "XF86AudioMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
-        "XF86AudioMicMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
-        "XF86AudioPlay".action = spawn "playerctl" "play-pause";
-        "XF86AudioPause".action = spawn "playerctl" "play-pause";
-        "XF86AudioNext".action = spawn "playerctl" "next";
-        "XF86AudioPrev".action = spawn "playerctl" "previous";
+        "XF86AudioRaiseVolume".action = spawn "dms" "ipc" "call" "audio" "increment" "4";
+        "XF86AudioLowerVolume".action = spawn "dms" "ipc" "call" "audio" "decrement" "4";
+        "XF86AudioMute".action = spawn "dms" "ipc" "call" "audio" "mute";
+        "XF86AudioMicMute".action = spawn "dms" "ipc" "call" "audio" "micmute";
+        "XF86AudioPlay".action = spawn "dms" "ipc" "call" "mpris" "playPause";
+        "XF86AudioPause".action = spawn "dms" "ipc" "call" "mpris" "playPause";
+        "XF86AudioNext".action = spawn "dms" "ipc" "call" "mpris" "next";
+        "XF86AudioPrev".action = spawn "dms" "ipc" "call" "mpris" "previous";
       };
     };
   };

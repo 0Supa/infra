@@ -22,7 +22,7 @@
 
     fenix.url = "github:nix-community/fenix";
     niri.url = "github:sodiboo/niri-flake";
-    waybar.url = "github:Alexays/Waybar";
+    dms.url = "github:AvengeMedia/DankMaterialShell";
     stylix.url = "github:nix-community/stylix/release-25.11";
     technorino.url = "git+https://github.com/2547techno/technorino?submodules=1";
     redlib.url = "github:0Supa/redlib/prod";

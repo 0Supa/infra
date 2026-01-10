@@ -8,7 +8,6 @@
 {
   imports = [
     ./niri.nix
-    ./waybar.nix
   ];
 
   stylix = {
@@ -45,8 +44,6 @@
       popups = 0.8;
       terminal = 0.8;
     };
-
-    targets.swaync.enable = false;
   };
 
   gtk = {
@@ -117,6 +114,16 @@
       '';
     };
 
+    dank-material-shell = {
+      enable = true;
+      enableSystemMonitoring = false;
+      niri = {
+        enableKeybinds = false;
+        enableSpawn = true;
+        includes.enable = false;
+      };
+    };
+
     foot = {
       enable = true;
       settings = {
@@ -139,10 +146,6 @@
         symbol_map U+f000-U+f2e0 Font Awesome 6 Free
       '';
     };
-
-    swaylock.enable = true;
-
-    fuzzel.enable = true;
 
     mpv = {
       enable = true;
@@ -230,69 +233,7 @@
   };
 
   services = {
-    polkit-gnome.enable = true;
     mpris-proxy.enable = true;
-
-    swaync = {
-      enable = true;
-      settings = {
-        control-center-margin-top = 4;
-        control-center-margin-right = 4;
-        control-center-margin-bottom = 4;
-        notification-window-width = 400;
-        widgets = [
-          "mpris"
-          "inhibitors"
-          "notifications"
-        ];
-      };
-      style = with config.lib.stylix.colors.withHashtag; ''
-        @define-color base00 ${base00}; @define-color base01 ${base01};
-        @define-color base02 ${base02}; @define-color base03 ${base03};
-        @define-color base04 ${base04}; @define-color base05 ${base05};
-        @define-color base06 ${base06}; @define-color base07 ${base07};
-
-        @define-color base08 ${base08}; @define-color base09 ${base09};
-        @define-color base0A ${base0A}; @define-color base0B ${base0B};
-        @define-color base0C ${base0C}; @define-color base0D ${base0D};
-        @define-color base0E ${base0E}; @define-color base0F ${base0F};
-
-        .control-center {
-          border: 2px solid @base0D;
-        }
-
-        .notification {
-          background: @base00;
-        }
-
-        .floating-notifications {
-          margin-top: 6px;
-        }
-
-        .notification-group {
-          background: transparent;
-        }
-
-        :root {
-          --cc-bg: alpha(@base00, 0.8);
-
-          --noti-border-color: @base0D;
-          # --noti-bg: 48, 48, 48;
-          # --noti-bg-alpha: 0.8;
-          --noti-bg-darker: @base01;
-          --noti-bg-hover: @base02;
-          --noti-bg-focus: @base03;
-          --noti-close-bg: @base01;
-          --noti-close-bg-hover: @base02;
-
-          --text-color: @base05;
-          --text-color-disabled: @base04;
-
-          # --border: 2px solid var(--noti-border-color);
-          --border-radius: 12px;
-        }
-      '';
-    };
   };
 
   xdg.mimeApps = {

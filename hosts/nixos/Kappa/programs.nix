@@ -1,12 +1,22 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
+  imports = [
+    inputs.dms.nixosModules.greeter
+  ];
+
   programs = {
     niri = {
       enable = true;
       package = pkgs.niri-unstable;
+    };
+
+    dank-material-shell.greeter = {
+      enable = true;
+      compositor.name = "niri";
     };
 
     firefox.enable = true;

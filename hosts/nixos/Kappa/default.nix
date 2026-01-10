@@ -27,6 +27,8 @@
             inputs.stylix.homeModules.stylix
             inputs.niri.homeModules.config
             inputs.niri.homeModules.stylix
+            inputs.dms.homeModules.dank-material-shell
+            inputs.dms.homeModules.niri
           ];
         };
       };
