@@ -94,7 +94,7 @@
         update = "doas nixos-rebuild switch --flake ~/.dotfiles";
         ip = "ip -color=auto";
         grep = "grep --color=auto";
-        vs = "codium";
+        vs = "code";
         s = "ssh";
         v = "vim";
         e = "hx";
@@ -238,19 +238,19 @@
       "application/x-extension-xht" = "firefox.desktop";
       "application/pdf" = "firefox.desktop";
 
-      "text/html" = "codium.desktop";
-      "text/plain" = "codium.desktop";
-      "application/octet-stream" = "codium.desktop";
-      "application/x-zerosize" = "codium.desktop";
+      "text/html" = "code.desktop";
+      "text/plain" = "code.desktop";
+      "application/octet-stream" = "code.desktop";
+      "application/x-zerosize" = "code.desktop";
 
-      "image/png" = "nsxiv.desktop";
-      "image/jpg" = "nsxiv.desktop";
-      "image/jpeg" = "nsxiv.desktop";
-      "image/gif" = "nsxiv.desktop";
-      "image/webp" = "nsxiv.desktop";
-      "image/heic" = "nsxiv.desktop";
-      "image/apng" = "nsxiv.desktop";
-      "image/svg+xml" = "nsxiv.desktop";
+      "image/png" = "org.xfce.ristretto.desktop";
+      "image/jpg" = "org.xfce.ristretto.desktop";
+      "image/jpeg" = "org.xfce.ristretto.desktop";
+      "image/gif" = "org.xfce.ristretto.desktop";
+      "image/webp" = "org.xfce.ristretto.desktop";
+      "image/heic" = "org.xfce.ristretto.desktop";
+      "image/apng" = "org.xfce.ristretto.desktop";
+      "image/svg+xml" = "org.xfce.ristretto.desktop";
 
       "video/*" = "mpv.desktop";
     };
@@ -264,7 +264,7 @@
       MailReader=thunderbird
       TextEditor=code
       VideoPlayer=mpv
-      ImageViewer=nsxiv
+      ImageViewer=ristretto
       ArchiveManager=file-roller
     '';
 
