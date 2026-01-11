@@ -62,7 +62,6 @@
     # Dev
     vscode
     github-desktop
-    helix
     insomnia
     gh
     lazygit

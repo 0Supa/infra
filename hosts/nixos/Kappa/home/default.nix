@@ -213,23 +213,6 @@
         };
       };
     };
-
-    helix = {
-      enable = true;
-      settings = {
-        editor = {
-          line-number = "relative";
-          lsp.display-messages = true;
-        };
-        keys.normal = {
-          space.space = "file_picker";
-          esc = [
-            "collapse_selection"
-            "keep_primary_selection"
-          ];
-        };
-      };
-    };
   };
 
   services = {
