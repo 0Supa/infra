@@ -273,14 +273,18 @@
     };
   };
 
-  xdg.configFile."xfce4/helpers.rc".text = ''
-    TerminalEmulator=foot
-    FileManager=thunar
-    WebBrowser=firefox
-    MailReader=thunderbird
-    TextEditor=code
-    VideoPlayer=mpv
-    ImageViewer=nsxiv
-    ArchiveManager=file-roller
-  '';
+  xdg.configFile = {
+    "xfce4/helpers.rc".text = ''
+      TerminalEmulator=foot
+      FileManager=thunar
+      WebBrowser=firefox
+      MailReader=thunderbird
+      TextEditor=code
+      VideoPlayer=mpv
+      ImageViewer=nsxiv
+      ArchiveManager=file-roller
+    '';
+
+    "DankMaterialShell/settings.json".source = ./dms/settings.json;
+  };
 }
