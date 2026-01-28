@@ -34,12 +34,6 @@
           file_server
           import static
 
-          handle_path /dalle/ws {
-            reverse_proxy :7740
-          }
-          handle /rcp/* {
-            reverse_proxy :3840
-          }
           handle_path /clipper/* {
             basic_auth {
               api $2a$14$XAF/HBVE//6UOQ4d2AoqBu7jVS2t19/G53tktv8q1eTrEVPf9hRRG

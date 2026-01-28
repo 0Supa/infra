@@ -39,8 +39,6 @@ in
 
     twitch-tags = mkService "node ." "${projects}/twitch-tags" [ pkgs.nodejs ];
     # supatv-api = mkService "./api" "${projects}/supatv/api" [ ];
-    dalle-redeem = mkService "node ." "${projects}/dalle-redeem" [ pkgs.nodejs ];
-    random-clip-player = mkService "node ." "${projects}/random-clip-player" [ pkgs.nodejs ];
 
     rustlog = mkService "./rustlog" "${home}/git/rustlog" [ ];
 
