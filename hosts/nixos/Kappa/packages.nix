@@ -80,6 +80,7 @@
     jellyfin-mpv-shim
     jellyfin-rpc
     spotify
+    cider-2
     audacity
     imagemagick
 
