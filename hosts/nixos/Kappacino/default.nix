@@ -62,6 +62,15 @@
     rtkit.enable = true;
   };
 
+  fileSystems."/var/www/fi.supa.sh/clips" = {
+    device = "10.2.0.1:/supelle";
+    fsType = "nfs";
+    options = [
+      "fsc"
+      "nofail"
+    ];
+  };
+
   services = {
     xserver.videoDrivers = [ "intel" ];
 
