@@ -66,22 +66,6 @@ in
       mkService "./spacetime start --listen-addr 0.0.0.0:12661" "${home}/git/SpacetimeDB/target/release"
         [ ];
 
-    r2-vods = {
-      enable = false;
-      unitConfig = {
-        After = "network-online.target";
-      };
-      serviceConfig = {
-        Type = "simple";
-        User = "root";
-        Restart = "always";
-        RestartSec = 3;
-        ExecStart = "${lib.getExe pkgs.rclone} mount r2-vods:vods /mnt/r2/vods --vfs-cache-mode writes --allow-non-empty --allow-other --config='${home}/.config/rclone/rclone.conf'";
-        ExecStop = "/run/wrappers/bin/fusermount -u /mnt/r2/vods";
-      };
-      wantedBy = [ "multi-user.target" ];
-    };
-
     mc-supa = {
       enable = true;
       restartIfChanged = false;
