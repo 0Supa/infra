@@ -67,6 +67,7 @@
     fsType = "nfs";
     options = [
       "fsc"
+      "noatime"
       "nofail"
     ];
   };
